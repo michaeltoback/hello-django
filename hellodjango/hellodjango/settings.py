@@ -23,7 +23,7 @@ SECRET_KEY = '-u2l*46ldo8_s-1ex0#)&yvkllejh9qs6d65191dez^e22%(kk'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
-
+TEMPLATE_DIRS = ('templates',)
 ALLOWED_HOSTS = []
 
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'hello',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,5 +80,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR,"static"),)
