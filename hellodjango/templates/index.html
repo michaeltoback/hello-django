@@ -2,4 +2,18 @@
 {% block title %}Django Sample Home Page{% endblock %}
 {% block content %}
 <h1>Hello, Django</h1>
+<input type="button" id="test" value="click it"/>
+<div id="divit">Not from django</div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#test').click(function () {
+                    $.get("/ajax/", function(data) {
+                        console.log(data);
+                        var obj = JSON.parse(data);
+                        console.log("message is " + obj['message']);
+                        document.getElementById('divit').innerHTML=obj['message'];
+                    });
+                });
+            });
+        </script>
 {% endblock %}
