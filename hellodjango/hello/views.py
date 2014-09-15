@@ -8,9 +8,12 @@ def home(request):
     return render(request, 'index.html', {})
 
 def ajax(request):
-    print "in ajax"
     try:
-        message = ' Hello Ajax ' + str(datetime.now()) 
+        name = request.GET['name']
+        message = echo(name) 
         return HttpResponse(json.dumps({'message': message})) 
     except Exception as exc:
         print(exc)
+
+def echo(name):
+    return ' Hello ' +name + "! The time is " + str(datetime.now())

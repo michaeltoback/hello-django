@@ -1,3 +1,12 @@
 from django.test import TestCase
+from django.test import TestCase
+import views
 
-# Create your tests here.
+class EchoTestCase(TestCase):
+    def setUp(self):
+        pass
+
+    def test_echo_happy_path(self):
+        result = views.echo("John")
+        self.assertTrue("Hello John! The time is " in result) 
+        self.assertEquals(len(result), 51)
