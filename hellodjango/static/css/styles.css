@@ -1,3 +1,70 @@
-h1 {
-    color:blue;
+html, body {height: 100%;}
+
+#banner{
+	height: 100px;
+	background-color: blue;
+    margin-top:-30px;
 }
+
+#banner p{
+	color:white;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2.0em;
+}
+
+ #top_menu{
+        float: left;
+        position:relative;
+        top:4px;
+        left: 30px;
+    }
+    #top_menu ul{
+        margin:0;
+        padding: 0;
+    }
+    #top_menu li{
+        float: left;
+        list-style: none;
+        font-weight: bold;
+        font-size: 1.4em;
+        height: 100%;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .right_line {
+    	border-right: 1px solid #871919;
+    }
+
+    .right_line:hover {
+        color:white;
+    }
+    .noline {
+    	border-right: 0;
+    }
+
+    .noline:hover {
+        color:white;
+    }
+    #container {
+    	overflow:auto;
+        height: 100%;
+
+    }
+
+  .fixedwidth {
+        margin:0 auto;
+        float: left;
+        position:relative;
+        top:4px;
+        left: 40px;
+    }
+    #footer {
+        text-align: center;
+        font-size: 0.8em;
+    position: relative;
+    margin-top: -30px; /* negative value of footer height */
+    height: 30px;
+    clear:both;
+    }
+

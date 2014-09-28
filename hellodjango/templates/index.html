@@ -1,20 +1,86 @@
 {% extends "base.html" %}
-{% block title %}Django Sample Home Page{% endblock %}
+{% block title %}Welcome to My Django Site!{% endblock %}
 {% block content %}
-<h1>Hello, Django</h1>
-<input type="text" id="name" />
-<input type="button" id="test" value="click it!"/>`
-<div id="divit">Not from django</div>
-        <script type="text/javascript">
+	<div id="container">
+		<div id="banner">
+			<p>Michael Toback Welcomes You To His Site!</p>
+			<div id="top_menu">
+				<ul>
+					<li class="right_line" id="menu_welcome" >Welcome!</li>
+					<li class="right_line" id="menu_about_me">About Me</li>
+					<li class="right_line" id="menu_career" >Career</li>
+					<li class="right_line" id="menu_schools">Schools</li>
+					<li class="noline" id="menu_hobbies" >Hobbies</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="content" class="fixedwidth">
+			<div id="content_welcome">
+				<p>Welcome to my site! I am doing a deep-dive into the entire tech-stack from MySQL to HTML and everything in-between.</p>
+				<p>As time goes on, this site will get more and more interesting as I try new and different techniques
+				</p>
+			</div>
+			<div id="content_about_me">I am me</div>
+			<div id="content_career" >I work</div>
+			<div id="content_schools">I went to school</div>
+			<div id="content_hobbies">I like to play piano</div>
+		</div>
+	</div>
+	<div id="footer">
+		This site is powered by <a href="http://python.org" target="_blank">Python</a>, <a href="http://www.djangoproject.com" target="_blank">Django</a>, and <a href="http://jquery.com">jQuery</a>, as well as 
+		<a href="http://www.w3.org/TR/html5/" target="_blank">HTML</a> and <a href="http://www.w3.org/TR/CSS/" target="_blank">CSS</a>.
+
+	</div>
+     <script type="text/javascript">
             $(document).ready(function() {
-                $('#test').click(function () {
-                    $.get("/ajax/?name="+$("#name").val(), function(data) {
+                $('#menu_about_me').click(function () {
+                     $.get("http://198.199.114.41:8000/ajax/?name="+$(this).attr('id'), function(data) {
                         console.log(data);
+                        about_me();
                         var obj = JSON.parse(data);
-                        console.log("message is " + obj['message']);
-                        document.getElementById('divit').innerHTML=obj['message'];
+                        $('#content_about_me').html(obj['message']);
                     });
                 });
+                $('#menu_welcome').click(function () {
+                    $.get("http://198.199.114.41:8000/ajax/?name="+$(this).attr('id'), function(data) {
+                        console.log(data);
+                        welcome();
+                        var obj = JSON.parse(data);
+                        $('#content_welcome').html(obj['message']);
+                    });
+                });
+                $('#menu_career').click(function () {
+                    $.get("http://198.199.114.41:8000/ajax/?name="+$(this).attr('id'), function(data) {
+                        console.log(data);
+                        career();
+                        var obj = JSON.parse(data);
+                        $('#content_career').html(obj['message']);
+                    });
+                });
+                $('#menu_schools').click(function () {
+                    $.get("http://198.199.114.41:8000/ajax/?name="+$(this).attr('id'), function(data) {
+                        console.log(data);
+                        schools();
+                        var obj = JSON.parse(data);
+                        $('#content_schools').html(obj['message']);
+                    });
+                });
+                $('#menu_hobbies').click(function () {
+                    $.get("http://198.199.114.41:8000/ajax/?name="+$(this).attr('id'), function(data) {
+                        console.log(data);
+                        hobbies();
+                        var obj = JSON.parse(data);
+                        $('#content_hobbies').html(obj['message']);
+                    });
+                });
+                $.get("http://198.199.114.41:8000/ajax/?name=menu_welcome", function(data) {
+                    console.log(data);
+                    welcome();
+                    var obj = JSON.parse(data);
+                    $('#content_welcome').html(obj['message']);
+                });
+ 
             });
         </script>
 {% endblock %}
