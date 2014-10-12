@@ -1,0 +1,2 @@
+hello/views.py:20: [E] PYFLAKES:local variable 'now' is assigned to but never used
+hello/admin.py:1: [E] PYFLAKES:'admin' imported but unused

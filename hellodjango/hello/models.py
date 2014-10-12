@@ -65,4 +65,11 @@ class Terms(models.Model):
     terms_party = models.CharField(max_length=32)
     terms_district = models.IntegerField(default=-1)
 
-
+class Zipcode(models.Model):
+     zip = models.IntegerField()
+     city = models.CharField(max_length=32)
+     state = models.CharField(max_length=2)
+     latitude = models.FloatField()
+     longitude = models.FloatField()
+     timezone = models.IntegerField()
+     dst = models.CharField(max_length=1)

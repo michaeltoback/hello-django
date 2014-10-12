@@ -1,0 +1,245 @@
+************* Module hello.tests
+hello/tests.py:12: [C0303(trailing-whitespace), ] Trailing whitespace
+hello/tests.py:4: [W0403(relative-import), ] Relative import 'views', should be 'hello.views'
+hello/tests.py:6: [R0904(too-many-public-methods), EchoTestCase] Too many public methods (65/50)
+************* Module hello.views
+hello/views.py:13: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/views.py:14: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/views.py:15: [W0311(bad-indentation), ] Bad indentation. Found 9 spaces, expected 8
+hello/views.py:16: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/views.py:23: [C0326(bad-whitespace), ] Exactly one space required around comparison
+        if name=="menu_about_me":
+               ^^
+hello/views.py:25: [C0326(bad-whitespace), ] Exactly one space required around comparison
+        elif name=="menu_welcome":
+                 ^^
+hello/views.py:27: [C0326(bad-whitespace), ] Exactly one space required around comparison
+        elif name=="menu_career":
+                 ^^
+hello/views.py:29: [C0326(bad-whitespace), ] Exactly one space required around comparison
+        elif name=="menu_schools":
+                 ^^
+hello/views.py:31: [C0326(bad-whitespace), ] Exactly one space required around comparison
+        elif name=="menu_hobbies":
+                 ^^
+hello/views.py:34: [C0303(trailing-whitespace), ] Trailing whitespace
+hello/views.py:36: [C0325(superfluous-parens), ] Unnecessary parens after u'print' keyword
+hello/views.py:35: [W0703(broad-except), ajax] Catching too general exception Exception
+hello/views.py:20: [W0612(unused-variable), ajax] Unused variable 'now'
+************* Module hello.api
+hello/api.py:12: [C0330(bad-continuation), ] Wrong hanging indentation.
+                     'first_name': ALL,
+            |        ^
+hello/api.py:13: [C0330(bad-continuation), ] Wrong hanging indentation.
+                     'last_name':ALL,
+            |        ^
+hello/api.py:14: [C0330(bad-continuation), ] Wrong hanging indentation.
+                     }
+        |   |        ^
+hello/api.py:23: [C0330(bad-continuation), ] Wrong hanging indentation.
+                     'terms_start': ['exact', 'range', 'gt', 'gte', 'lt', 'lte'],
+            |        ^
+hello/api.py:24: [C0330(bad-continuation), ] Wrong hanging indentation.
+                     'terms_end':['exact', 'range', 'gt', 'gte', 'lt', 'lte'],
+            |        ^
+hello/api.py:25: [C0330(bad-continuation), ] Wrong hanging indentation.
+                     'terms_state':ALL,
+            |        ^
+hello/api.py:26: [C0330(bad-continuation), ] Wrong hanging indentation.
+                     }
+        |   |        ^
+************* Module hello.models
+hello/models.py:26: [C0303(trailing-whitespace), ] Trailing whitespace
+hello/models.py:27: [C0303(trailing-whitespace), ] Trailing whitespace
+hello/models.py:29: [C0303(trailing-whitespace), ] Trailing whitespace
+hello/models.py:49: [C0326(bad-whitespace), ] Exactly one space required before assignment
+    wikipedia_id= models.CharField(max_length=48, default="none")
+                ^
+hello/models.py:50: [C0326(bad-whitespace), ] Exactly one space required before assignment
+    ballotpedia_id= models.CharField(max_length=48,default="none")
+                  ^
+hello/models.py:50: [C0326(bad-whitespace), ] Exactly one space required after comma
+    ballotpedia_id= models.CharField(max_length=48,default="none")
+                                                  ^
+hello/models.py:51: [C0326(bad-whitespace), ] Exactly one space required before assignment
+    maplight_id= models.IntegerField(default=-1)
+               ^
+hello/models.py:52: [C0326(bad-whitespace), ] Exactly one space required before assignment
+    washington_post_id= models.CharField(max_length=48, default="none")
+                      ^
+hello/models.py:54: [C0326(bad-whitespace), ] Exactly one space required before assignment
+    last_name  = models.CharField(max_length=32)
+               ^
+hello/models.py:64: [C0326(bad-whitespace), ] Exactly one space required before assignment
+    terms_class  = models.IntegerField(default=-1)
+                 ^
+hello/models.py:69: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/models.py:70: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/models.py:71: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/models.py:72: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/models.py:73: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/models.py:74: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/models.py:75: [W0311(bad-indentation), ] Bad indentation. Found 5 spaces, expected 4
+hello/models.py:24: [W0105(pointless-string-statement), ] String statement has no effect
+************* Module hello.admin
+hello/admin.py:1: [W0611(unused-import), ] Unused import admin
+************* Module hello.migrations.0002_auto_20140927_1522
+hello/migrations/0002_auto_20140927_1522.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
+==hello.migrations.0005_auto_20140928_0010:60
+==hello.migrations.0006_auto_20140928_0023:17
+==hello.migrations.0007_auto_20141011_2254:28
+        ),
+        migrations.AlterField(
+            model_name='terms',
+            name='bioguide_id',
+            field=models.ForeignKey(to='hello.Legislator'),
+        ),
+    ]
+
+
+Report
+======
+130 statements analysed.
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |25     |25       |=          |
++-----------+-------+---------+-----------+
+|refactor   |2      |2        |=          |
++-----------+-------+---------+-----------+
+|warning    |16     |16       |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++-------------+------+--------+---------+-----------+
+|module       |error |warning |refactor |convention |
++=============+======+========+=========+===========+
+|hello.models |0.00  |50.00   |0.00     |40.00      |
++-------------+------+--------+---------+-----------+
+|hello.views  |0.00  |37.50   |0.00     |28.00      |
++-------------+------+--------+---------+-----------+
+|hello.tests  |0.00  |6.25    |50.00    |4.00       |
++-------------+------+--------+---------+-----------+
+|hello.admin  |0.00  |6.25    |0.00     |0.00       |
++-------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++---------------------------+------------+
+|message id                 |occurrences |
++===========================+============+
+|bad-whitespace             |12          |
++---------------------------+------------+
+|bad-indentation            |11          |
++---------------------------+------------+
+|bad-continuation           |7           |
++---------------------------+------------+
+|trailing-whitespace        |5           |
++---------------------------+------------+
+|unused-variable            |1           |
++---------------------------+------------+
+|unused-import              |1           |
++---------------------------+------------+
+|too-many-public-methods    |1           |
++---------------------------+------------+
+|superfluous-parens         |1           |
++---------------------------+------------+
+|relative-import            |1           |
++---------------------------+------------+
+|pointless-string-statement |1           |
++---------------------------+------------+
+|duplicate-code             |1           |
++---------------------------+------------+
+|broad-except               |1           |
++---------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 6.69/10 (previous run: 6.69/10, +0.00)
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |329    |81.03 |329      |=          |
++----------+-------+------+---------+-----------+
+|docstring |24     |5.91  |24       |=          |
++----------+-------+------+---------+-----------+
+|comment   |26     |6.40  |26       |=          |
++----------+-------+------+---------+-----------+
+|empty     |27     |6.65  |27       |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |14     |14         |=          |0.00        |50.00    |
++---------+-------+-----------+-----------+------------+---------+
+|class    |15     |15         |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |2      |2          |=          |50.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |4      |4          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    datetime (hello.views)
+    django 
+      \-conf (hello.views)
+      \-contrib 
+      | \-admin (hello.admin)
+      \-db 
+      | \-migrations (hello.migrations.0004_auto_20140927_2226,hello.migrations.0006_auto_20140928_0023,hello.migrations.0001_initial,hello.migrations.0002_auto_20140927_1522,hello.migrations.0005_auto_20140928_0010,hello.migrations.0007_auto_20141011_2254,hello.migrations.0003_auto_20140927_2151)
+      | \-models (hello.models,hello.migrations.0004_auto_20140927_2226,hello.migrations.0006_auto_20140928_0023,hello.migrations.0001_initial,hello.migrations.0002_auto_20140927_1522,hello.migrations.0005_auto_20140928_0010,hello.migrations.0007_auto_20141011_2254,hello.migrations.0003_auto_20140927_2151)
+      \-http (hello.views)
+      \-shortcuts (hello.views)
+      \-test (hello.tests)
+    hello 
+      \-models (hello.api)
+      \-views (hello.tests)
+    tastypie 
+      \-fields (hello.api)
+      \-resources (hello.api)
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |14    |14       |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |3.241 |3.241    |=          |
++-------------------------+------+---------+-----------+
+
+
+

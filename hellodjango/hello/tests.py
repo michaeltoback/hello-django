@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.test import TestCase
-from django.test import TestCase
 import views
 
 class EchoTestCase(TestCase):
